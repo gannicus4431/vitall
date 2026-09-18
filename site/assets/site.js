@@ -1,4 +1,4 @@
-/* Vitall site — nav, reveal, spotlight, cursor light, headline decode, hero point cloud + HUD. */
+/* Vitall site — nav, reveal, spotlight, cursor light, headline word-rise, hero point cloud + HUD. */
 (function () {
   'use strict';
   document.documentElement.classList.add('js');
@@ -50,26 +50,18 @@
     document.addEventListener('pointerleave', function () { light.style.opacity = '0'; });
   }
 
-  /* Headline decode */
+  /* Headline: each word rises into place. Text is final from the first frame,
+     so nothing reflows; only the transform animates. */
   var h = document.getElementById('decode');
   if (h && !reduce) {
-    var target = h.getAttribute('data-text');
-    var glyphs = '01<>/\\|[]{}=+*#%@&$';
-    var t0 = null, dur = 1100;
-    function tick(ts) {
-      if (!t0) t0 = ts;
-      var k = Math.min(1, (ts - t0) / dur);
-      var settled = Math.floor(k * target.length);
-      var out = '';
-      for (var i = 0; i < target.length; i++) {
-        var c = target[i];
-        if (i < settled || c === ' ' || c === '.') out += c;
-        else out += glyphs[Math.floor(Math.random() * glyphs.length)];
-      }
-      h.textContent = out;
-      if (k < 1) requestAnimationFrame(tick); else h.textContent = target;
-    }
-    requestAnimationFrame(tick);
+    var words = h.textContent.trim().split(/\s+/);
+    h.textContent = '';
+    words.forEach(function (w, i) {
+      var outer = document.createElement('span'); outer.className = 'w';
+      var inner = document.createElement('span'); inner.textContent = w; inner.style.animationDelay = (120 + i * 110) + 'ms';
+      outer.appendChild(inner); h.appendChild(outer);
+      if (i < words.length - 1) h.appendChild(document.createTextNode(' '));
+    });
   }
 
   /* Contact form.

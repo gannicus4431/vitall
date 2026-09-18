@@ -19,7 +19,7 @@ site/index.html         The whole site: hero, four capability cards, contact for
 site/privacy.html       Privacy policy (PDPA-based; has the data-deletion instructions Meta asks for)
 site/terms.html         Terms of service (Singapore law; website + messaging channels)
 site/assets/style.css   All styling; tokens at the top. Single dark theme, deliberately.
-site/assets/site.js     Mobile nav, scroll reveal, card spotlight, cursor light, headline decode, hero point cloud + live HUD readout
+site/assets/site.js     Mobile nav, scroll reveal, card spotlight, cursor light, headline word-rise, hero point cloud + live HUD readout
 ```
 
 Fonts come from Google Fonts (Sora / Manrope / JetBrains Mono). Favicon is an

@@ -132,7 +132,13 @@ main, .nav, .footer, .ticker { position: relative; z-index: 1; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
   margin-bottom: 26px; font-variant-numeric: tabular-nums;
 }
+.hero-title .w { display: inline-block; overflow: hidden; vertical-align: bottom; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.hero-title .w > span { display: inline-block; transform: translateY(110%); animation: rise .9s cubic-bezier(.2,.7,.1,1) forwards; }
+@keyframes rise { to { transform: translateY(0); } }
 .hero-lede { color: var(--muted); font-size: clamp(1.05rem, 1.5vw, 1.3rem); font-weight: 500; margin-bottom: 36px; line-height: 1.5; }
+.js .hero-lede, .js .hero-cta { animation: fadeup .8s ease .55s both; }
+.js .hero-cta { animation-delay: .7s; }
+@keyframes fadeup { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* HUD readout */
@@ -263,7 +269,8 @@ main, .nav, .footer, .ticker { position: relative; z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .ticker-track, .aurora, .signal i { animation: none; }
+  .ticker-track, .aurora, .signal i, .hero-title .w > span, .js .hero-lede, .js .hero-cta { animation: none; }
+  .hero-title .w > span { transform: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .btn, .card, .layer, .sectors li, .step::after { transition: none; }
   .cursor-light { display: none; }

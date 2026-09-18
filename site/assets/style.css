@@ -132,6 +132,9 @@ main, .nav, .footer, .ticker { position: relative; z-index: 1; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
   margin-bottom: 26px; font-variant-numeric: tabular-nums;
 }
+/* Light entrance: the text block fades up once. Final text from the first frame, no width change. */
+.js .hero-in { animation: hero-in .7s ease-out both; }
+@keyframes hero-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 .hero-lede { color: var(--muted); font-size: clamp(1.05rem, 1.5vw, 1.3rem); font-weight: 500; margin-bottom: 36px; line-height: 1.5; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
 
@@ -263,7 +266,7 @@ main, .nav, .footer, .ticker { position: relative; z-index: 1; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .ticker-track, .aurora, .signal i { animation: none; }
+  .ticker-track, .aurora, .signal i, .js .hero-in { animation: none; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .btn, .card, .layer, .sectors li, .step::after { transition: none; }
   .cursor-light { display: none; }

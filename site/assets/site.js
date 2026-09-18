@@ -1,4 +1,4 @@
-/* Vitall site — nav, reveal, spotlight, cursor light, headline word-rise, hero point cloud + HUD. */
+/* Vitall site — nav, reveal, spotlight, cursor light, hero point cloud + HUD. */
 (function () {
   'use strict';
   document.documentElement.classList.add('js');
@@ -48,20 +48,6 @@
       light.style.opacity = '1';
     }, { passive: true });
     document.addEventListener('pointerleave', function () { light.style.opacity = '0'; });
-  }
-
-  /* Headline: each word rises into place. Text is final from the first frame,
-     so nothing reflows; only the transform animates. */
-  var h = document.getElementById('decode');
-  if (h && !reduce) {
-    var words = h.textContent.trim().split(/\s+/);
-    h.textContent = '';
-    words.forEach(function (w, i) {
-      var outer = document.createElement('span'); outer.className = 'w';
-      var inner = document.createElement('span'); inner.textContent = w; inner.style.animationDelay = (120 + i * 110) + 'ms';
-      outer.appendChild(inner); h.appendChild(outer);
-      if (i < words.length - 1) h.appendChild(document.createTextNode(' '));
-    });
   }
 
   /* Contact form.

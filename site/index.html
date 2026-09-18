@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vitall</title>
+<meta name="description" content="Vitall builds custom AI and robotics solutions for businesses in Singapore and the region — from perception and autonomy to fleet deployment.">
+<meta property="og:title" content="Vitall — Custom AI &amp; Robotics Solutions · Singapore">
+<meta property="og:description" content="Custom AI and robotics solutions, built for your operation. Sensor to fleet. Singapore.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vitall.ai/">
+<meta name="theme-color" content="#04070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304070d'/%3E%3Cpath d='M16 18l16 30 16-30' fill='none' stroke='%234dd8ff' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='48' r='4' fill='%234dd8ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="cursor-light" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Vitall home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M16 18l16 30 16-30" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="32" cy="48" r="4" fill="currentColor"/>
+      </svg>
+      <span class="brand-word">Vitall<span class="brand-tld">.ai</span></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#capabilities">Solutions</a>
+      <a class="btn btn-small" href="#contact">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="aurora" aria-hidden="true"></div>
+  <canvas id="cloud" class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <p class="eyebrow"><span class="dot"></span>SG · CUSTOM AI × ROBOTICS</p>
+    <h1 class="hero-title" id="decode" data-text="Custom AI. Custom robots.">Custom AI. Custom robots.</h1>
+    <p class="hero-lede">Custom AI and robotics solutions, built to your spec. Singapore.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#contact">Start a project</a>
+    </div>
+  </div>
+  <div class="hud" aria-hidden="true">
+    <div class="hud-row"><span>SYS</span><b class="ok">NOMINAL</b></div>
+    <div class="hud-row"><span>PTS</span><b id="hudPts">3200</b></div>
+    <div class="hud-row"><span>ROT</span><b id="hudRot">000.0°</b></div>
+    <div class="hud-row"><span>SCAN</span><b id="hudScan">00.0%</b></div>
+    <div class="hud-row"><span>POS</span><b>1.2949N 103.8580E</b></div>
+  </div>
+  <div class="hero-corner tl" aria-hidden="true"></div>
+  <div class="hero-corner br" aria-hidden="true"></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Embodied AI</span><span>VLA models</span><span>3D perception</span><span>SLAM</span><span>Edge inference</span><span>Motion planning</span><span>Sim-to-real</span><span>Fleet ops</span><span>Digital twins</span><span>Closed-loop control</span>
+    <span>Embodied AI</span><span>VLA models</span><span>3D perception</span><span>SLAM</span><span>Edge inference</span><span>Motion planning</span><span>Sim-to-real</span><span>Fleet ops</span><span>Digital twins</span><span>Closed-loop control</span>
+  </div>
+</div>
+
+<!-- CAPABILITIES -->
+<section class="section" id="capabilities">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">// Solutions</p>
+      <h2>Custom AI and robotics solutions.</h2>
+    </div>
+    <div class="cards">
+      <article class="card hud-box reveal">
+        <span class="card-id">CAP.01</span>
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3z"/><path d="M9 8h6M9 12h6M9 16h3"/><path d="M3 9h3M3 15h3M18 9h3M18 15h3"/></svg></div>
+        <h3>Embodied AI</h3>
+        <ul class="tags"><li>VLA</li><li>Policy learning</li><li>Sim-to-real</li></ul>
+      </article>
+      <article class="card hud-box reveal">
+        <span class="card-id">CAP.02</span>
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><path d="M12 2v2M12 20v2"/></svg></div>
+        <h3>Perception</h3>
+        <ul class="tags"><li>Sensor fusion</li><li>SLAM</li><li>Tracking</li></ul>
+      </article>
+      <article class="card hud-box reveal">
+        <span class="card-id">CAP.03</span>
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4l2-6 4 2 3-5 3 1"/><circle cx="10" cy="14" r="1.5"/><circle cx="14" cy="16" r="1.5"/><circle cx="17" cy="11" r="1.5"/><path d="M4 4v16"/><path d="M4 4l3 3M4 4l-3 3"/></svg></div>
+        <h3>Autonomy</h3>
+        <ul class="tags"><li>Navigation</li><li>Manipulation</li><li>Safety</li></ul>
+      </article>
+      <article class="card hud-box reveal">
+        <span class="card-id">CAP.04</span>
+        <div class="card-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/><path d="M15 7h3M15 17h3"/></svg></div>
+        <h3>Fleet ops</h3>
+        <ul class="tags"><li>Edge + cloud</li><li>OTA</li><li>Observability</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-intro reveal">
+      <p class="eyebrow">// Start a project</p>
+      <h2>Tell us what you need built.</h2>
+      <p class="lede">A few lines is enough. We reply within two working days.</p>
+      <dl class="facts hud-box" aria-label="Company details">
+        <div><dt>Entity</dt><dd>Vitall Pte Ltd</dd></div>
+        <div><dt>UEN</dt><dd class="mono">202501111C</dd></div>
+        <div><dt>HQ</dt><dd>7 Temasek Boulevard #12-07<br>Suntec Tower One<br>Singapore 038987</dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:hi@vitall.ai">hi@vitall.ai</a></dd></div>
+      </dl>
+    </div>
+
+    <form class="cform hud-box reveal" id="contactForm" action="mailto:hi@vitall.ai" method="post" novalidate>
+      <div class="cform-row">
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="cf-email">Work email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="cform-row">
+        <div class="field">
+          <label for="cf-company">Company</label>
+          <input id="cf-company" name="company" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="cf-type">Project type</label>
+          <select id="cf-type" name="type">
+            <option value="">Select…</option>
+            <option>AI system</option>
+            <option>Robot / automation</option>
+            <option>Perception / vision</option>
+            <option>Fleet / operations</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="cf-msg">What do you need built?</label>
+        <textarea id="cf-msg" name="message" rows="5" required placeholder="The site, the task, the constraint."></textarea>
+      </div>
+      <div class="field hp" aria-hidden="true">
+        <label for="cf-web">Website</label>
+        <input id="cf-web" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="cform-consent">By sending you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+      <div class="cform-actions">
+        <button class="btn btn-primary btn-lg" type="submit" id="cf-submit">Send</button>
+        <p class="cform-status mono" id="cf-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <div class="footer-brand">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M16 18l16 30 16-30" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="32" cy="48" r="4" fill="currentColor"/>
+      </svg>
+      <span>Vitall</span>
+    </div>
+    <p class="footer-legal mono">© 2026 VITALL PTE LTD · UEN 202501111C · 7 TEMASEK BOULEVARD #12-07 SUNTEC TOWER ONE · SINGAPORE 038987</p>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
